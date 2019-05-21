@@ -3,6 +3,7 @@ import './App.css';
 import List from './List';
 
 function App(props) {
+  // console.log(props.store.lists);
   const lists = props.store.lists;
   const listLists = lists.map(list => {
     const cards = list.cardIds.map(cardId =>
