@@ -6,8 +6,11 @@ function App(props) {
   // console.log(props.store.lists);
   const lists = props.store.lists;
   const listLists = lists.map(list => {
-    const cards = list.cardIds.map(cardId =>
-      props.store.allCards[cardId])
+    const cards = list.cardIds.map(cardId => ({
+        ...props.store.allCards[cardId],
+        id: cardId
+    })); 
+
     return <List key={list.id} header={list.header} cards={cards} />
   })
   return (
