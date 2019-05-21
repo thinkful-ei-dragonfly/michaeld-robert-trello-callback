@@ -8,7 +8,7 @@ function App(props) {
   const listLists = lists.map(list => {
     const cards = list.cardIds.map(cardId =>
       props.store.allCards[cardId])
-    return <List header={list.header} cards={cards} />
+    return <List key={list.id} header={list.header} cards={cards} />
   })
   return (
     <main className='App'>

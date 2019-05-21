@@ -5,7 +5,7 @@ function List(props) {
   const cards = props.cards
   const cardLists = cards.map(card =>
     
-    <Card title={card.title} content={card.content} />)
+    <Card key={card.id} title={card.title} content={card.content}/>)
   return (
     <section className='List'>
       <header class="List-header">
