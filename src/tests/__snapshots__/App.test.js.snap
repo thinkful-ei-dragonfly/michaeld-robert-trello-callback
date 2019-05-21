@@ -18,7 +18,7 @@ exports[`<App /> renders without crashing 1`] = `
       className="List"
     >
       <header
-        class="List-header"
+        className="List-header"
       >
         <h2>
           First list
@@ -148,7 +148,7 @@ exports[`<App /> renders without crashing 1`] = `
           </p>
         </div>
         <button
-          class="List-add-button"
+          className="List-add-button"
           type="button"
         >
           + Add Random Card
@@ -159,7 +159,7 @@ exports[`<App /> renders without crashing 1`] = `
       className="List"
     >
       <header
-        class="List-header"
+        className="List-header"
       >
         <h2>
           Second list
@@ -274,7 +274,7 @@ exports[`<App /> renders without crashing 1`] = `
           </p>
         </div>
         <button
-          class="List-add-button"
+          className="List-add-button"
           type="button"
         >
           + Add Random Card
@@ -285,7 +285,7 @@ exports[`<App /> renders without crashing 1`] = `
       className="List"
     >
       <header
-        class="List-header"
+        className="List-header"
       >
         <h2>
           Third list
@@ -490,7 +490,7 @@ exports[`<App /> renders without crashing 1`] = `
           </p>
         </div>
         <button
-          class="List-add-button"
+          className="List-add-button"
           type="button"
         >
           + Add Random Card
@@ -501,7 +501,7 @@ exports[`<App /> renders without crashing 1`] = `
       className="List"
     >
       <header
-        class="List-header"
+        className="List-header"
       >
         <h2>
           Fourth list
@@ -541,7 +541,7 @@ exports[`<App /> renders without crashing 1`] = `
           </p>
         </div>
         <button
-          class="List-add-button"
+          className="List-add-button"
           type="button"
         >
           + Add Random Card

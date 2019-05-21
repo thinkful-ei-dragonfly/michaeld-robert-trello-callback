@@ -5,7 +5,7 @@ import '../index.css';
 import STORE from '../store';
 
 //make the App component available
-import App from './App';
+import App from '../composition/App';
 
 describe('<App />', () => {
   it('renders without crashing', () => {
