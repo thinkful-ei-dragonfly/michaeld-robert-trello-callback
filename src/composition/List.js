@@ -2,32 +2,16 @@ import React from 'react';
 import Card from './Card';
 
 export default function List(props) {
-  
-  // function to somehow delete card
-
-
-  // handleAddRandomCard = () => {
-  //   const id = Math.random().toString(36).substring(2, 4)
-  //     + Math.random().toString(36).substring(2, 4);
-  //   const newRandomCard = {
-  //     id,
-  //     title: `Random Card ${id}`,
-  //     content: 'lorem ipsum',
-  //   };
-  //   props.addRandomCard(newRandomCard, props.key)
-  // }
-  
-  
-  
+  console.log(props.cards[0])
   return (
     <section className='List'>
       <header className='List-header'>
         <h2>{props.header}</h2>
       </header>
       <div className='List-cards'>
-        {props.cards.map((card) =>
+        {props.cards.map((card, index) =>
           <Card
-            key={card.id}
+            key={index}
             id={card.id}
             title={card.title}
             content={card.content}
@@ -36,7 +20,6 @@ export default function List(props) {
         )}
         <button
           // onClick={this.handleAddRandomCard}
-         
           type='button'
           className='List-add-button'
         >
