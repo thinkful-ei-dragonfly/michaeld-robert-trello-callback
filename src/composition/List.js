@@ -3,16 +3,20 @@ import Card from './Card';
 
 export default function List(props) {
   
-  handleAddRandomCard = () => {
-    const id = Math.random().toString(36).substring(2, 4)
-      + Math.random().toString(36).substring(2, 4);
-    const newRandomCard = {
-      id,
-      title: `Random Card ${id}`,
-      content: 'lorem ipsum',
-    }
-    props.handleAddRandomCard(newRandomCard)
-  }
+  // function to somehow delete card
+
+
+  // handleAddRandomCard = () => {
+  //   const id = Math.random().toString(36).substring(2, 4)
+  //     + Math.random().toString(36).substring(2, 4);
+  //   const newRandomCard = {
+  //     id,
+  //     title: `Random Card ${id}`,
+  //     content: 'lorem ipsum',
+  //   };
+  //   props.addRandomCard(newRandomCard, props.key)
+  // }
+  
   
   
   return (
@@ -24,12 +28,15 @@ export default function List(props) {
         {props.cards.map((card) =>
           <Card
             key={card.id}
+            id={card.id}
             title={card.title}
             content={card.content}
+            deleteCard={props.deleteCard}
           />
         )}
         <button
-          onClick={handleAddRandomCard}
+          // onClick={this.handleAddRandomCard}
+         
           type='button'
           className='List-add-button'
         >
