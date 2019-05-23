@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 
 export default function List(props) {
-  console.log(props.cards[0])
+ // console.log(props.cards[0])
   return (
     <section className='List'>
       <header className='List-header'>
