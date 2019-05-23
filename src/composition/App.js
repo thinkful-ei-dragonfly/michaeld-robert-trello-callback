@@ -2,6 +2,17 @@ import React from "react";
 import "./App.css";
 import List from "./List";
 
+
+const newRandomCard = () => {
+  const id = Math.random().toString(36).substring(2, 4)
+    + Math.random().toString(36).substring(2, 4);
+  return {
+    id,
+    title: `Random Card ${id}`,
+    content: 'lorem ipsum',
+  }
+}
+
 const omit = (obj, keyToOmit) => {
   console.log("this ran");
   return Object.entries(obj).reduce(
@@ -80,6 +91,46 @@ class App extends React.Component {
     });
   };
 
+
+
+
+  handleAddRandomCard = (listId) => {
+    console.log(listId);
+    console.log('add list!');
+
+    const newCard = newRandomCard();
+
+    // const newCards = this.state
+
+    // 
+    const newLists = this.state.lists.map(list => {
+      if (list.id === listId) {
+        return { 
+          ...list,
+          cardIds: [...list.cardIds, newCard.id]
+        }
+        } else {
+          return list;
+        }
+    });
+
+
+
+    // const newCards = omit(this.state.allCards, cardId);
+    // const newCards = this.state.lists.map(list => ({
+    //   ...list,
+    //   cardIds: list.cardIds.filter(id => id !== cardId)
+    // }));
+    this.setState({
+      lists: newLists,
+      allCards: {...this.state.allCards, 
+        [newCard.id]: newCard,
+      }
+    });
+  }
+
+
+
   render() {
     // Information about each task is passed to Task via props
     return (
@@ -91,7 +142,7 @@ class App extends React.Component {
           {this.state.lists.map(list => (
             <List
               id={list.id}
-              addRandomCard={this.handleAddRandomCard}
+              addRandomCard={listId => this.handleAddRandomCard(listId)}
               deleteCard={cardId => {
                 this.handleDeleteCard(cardId);
               }}

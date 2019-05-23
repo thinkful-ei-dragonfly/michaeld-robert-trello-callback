@@ -19,7 +19,7 @@ export default function List(props) {
           />
         )}
         <button
-          // onClick={this.handleAddRandomCard}
+          onClick={() => props.addRandomCard(props.id)}
           type='button'
           className='List-add-button'
         >
